@@ -303,6 +303,7 @@ namespace _MYS1_Practica3_P21
 
             createPath(getNodo("Peten",1), getNodo("AeropuertoSalidaP", 0));
             updateName("Path1", "SalidaPeten");
+            model.Facility.IntelligentObjects["SalidaPeten"].Properties["SelectionWeight"].Value = "0.3";
 
 
             //Norte
@@ -334,8 +335,9 @@ namespace _MYS1_Practica3_P21
             createPath(getNodobasico("ResTNorte"), getNodo("Norte", 0));
             updateName("Path1", "ResNorte1");
 
-            createPath(getNodo("Norte", 0 ), getNodobasico("SalidaNorteNorOccidente"));
+            createPath(getNodo("Norte", 1 ), getNodobasico("SalidaNorteNorOccidente"));
             updateName("Path1", "PSalidaNorteNorOccidente");
+            model.Facility.IntelligentObjects["PSalidaNorteNorOccidente"].Properties["SelectionWeight"].Value = "0.1";
 
 
 
@@ -357,7 +359,7 @@ namespace _MYS1_Practica3_P21
             //output server -transerf 
             createPath(getNodo("NorOccidente", 1), getNodobasico("RetornoNorOccidente"));
             updateName("Path1", "RNorOccidente");
-            model.Facility.IntelligentObjects["RNorOccidente"].Properties["SelectionWeight"].Value = "0.4";
+            model.Facility.IntelligentObjects["RNorOccidente"].Properties["SelectionWeight"].Value = "0.40";
 
 
 
@@ -395,19 +397,21 @@ namespace _MYS1_Practica3_P21
             updateName("Path1", "ResNorOriente");
 
             createPath(getNodo("NorOriente", 1), getNodobasico("SalidaNorteNorOriente"));
-            updateName("Path1", "PSalidaNorteNorOriente");
+            updateName("Path2", "PathSalidaNorteNorOriente"); //path2
+            model.Facility.IntelligentObjects["PathSalidaNorteNorOriente"].Properties["SelectionWeight"].Value = "0.15";
 
             createPath(getNodo("NorOriente", 1), getNodobasico("SalidaNorOccidenteNorOriente"));
-            updateName("Path1", "ResNorOccidenteNorOriente");
+            updateName("Path2", "ResNorOccidenteNorOriente");
+            model.Facility.IntelligentObjects["ResNorOccidenteNorOriente"].Properties["SelectionWeight"].Value = "0.30";
 
-            
+
             //SurOriente
             createSource(7, 18);
             updateName("Source1", "TuristasNacionalesSurOriente");
             model.Facility.IntelligentObjects["TuristasNacionalesSurOriente"].Properties["InterarrivalTime"].Value = "Random.Poisson(10)";
 
             createPath(getNodo("TuristasNacionalesSurOriente", 0), getNodo("SurOriente", 0));
-            updateName("Path1", "NTuristasNorOriente");
+            updateName("Path2", "NTuristasNorOriente");
 
 
             createTransferNode(15, 23);
@@ -420,16 +424,20 @@ namespace _MYS1_Practica3_P21
             updateName("TransferNode1", "CentralSurOriente");
 
             createPath(getNodobasico("RetornoSurOriente"), getNodo("SurOriente", 0));
-            updateName("Path1", "RSurOriente2");
+            updateName("Path3", "RSurOriente2"); //Path3
 
             createPath(getNodo("SurOriente", 1), getNodobasico("RetornoSurOriente"));
-            updateName("Path1", "RSurOriente");
+            updateName("Path3", "RSurOriente");
+            model.Facility.IntelligentObjects["RSurOriente"].Properties["SelectionWeight"].Value = "0.4";
+
 
             createPath(getNodobasico("MetroSurOriente"), getNodo("SurOriente", 0));
             updateName("Path1", "PMetroSurOriente");
 
             createPath(getNodo("SurOriente",1), getNodobasico("CentralSurOriente"));
             updateName("Path1", "SalidaCentralSurOriente");
+            model.Facility.IntelligentObjects["SalidaCentralSurOriente"].Properties["SelectionWeight"].Value = "0.";
+
 
             //Central
             createSource(-23, 19);
@@ -450,6 +458,7 @@ namespace _MYS1_Practica3_P21
 
             createPath(getNodo("Central", 1), getNodobasico("RetornoCentral"));
             updateName("Path1", "RCentral");
+            model.Facility.IntelligentObjects["RCentral"].Properties["SelectionWeight"].Value = "0.35";
 
             createPath(getNodo("Central", 1), getNodobasico("SalidaSurOccidenteCentral"));
             updateName("Path1", "SalidaSurOccidenteCentral");
@@ -476,18 +485,21 @@ namespace _MYS1_Practica3_P21
             updateName("TransferNode1", "RetornoCentralSurOccidente");
 
             createPath(getNodo("TuristasNacionalesSurOccidente", 0), getNodo("SurOccidente", 0));
-            updateName("Path1", "NTuristasSurOccidente");
+            updateName("Path4", "NTuristasSurOccidente"); //path4
+
             createPath(getNodo("TuristasInternacionalesSurOccidente", 0), getNodo("SurOccidente", 0));
-            updateName("Path1", "ITuristasSurOccidente");
+            updateName("Path4", "ITuristasSurOccidente");
 
             createPath(getNodo("SurOccidente", 1), getNodobasico("RetornoSurOccidente"));
-            updateName("Path1", "RSurOccidente");
+            updateName("Path4", "RSurOccidente");
+            model.Facility.IntelligentObjects["RSurOccidente"].Properties["SelectionWeight"].Value = "0.35";
 
             createPath(getNodobasico("RetornoSurOccidente"), getNodo("SurOccidente", 0));
             updateName("Path1", "RSurOccidente2");
 
             createPath(getNodo("SurOccidente", 1), getNodo("AeropuertoSalidaSurOccidente", 0));
             updateName("Path1", "SalidaSurOccidente");
+            model.Facility.IntelligentObjects["SalidaSurOccidente"].Properties["SelectionWeight"].Value = "0.4";
 
             createPath(getNodobasico("RetornoCentralSurOccidente"), getNodo("SurOccidente", 0));
             updateName("Path1", "PRetornoCentralSurOccidente");
@@ -517,17 +529,20 @@ namespace _MYS1_Practica3_P21
 
             createPath(getNodo("TuristasNacionalesMetropolitana", 0), getNodo("Metropolitana", 0));
             updateName("Path1", "NTuristasMetropolitana");
+
             createPath(getNodo("TuristasInternacionalesMetropolitana", 0), getNodo("Metropolitana", 0));
             updateName("Path1", "ITuristasMetropolitana");
 
             createPath(getNodo("Metropolitana", 1), getNodobasico("RetornoMetropolitana"));
             updateName("Path1", "RMetropolitana");
+            model.Facility.IntelligentObjects["RMetropolitana"].Properties["SelectionWeight"].Value = "0.35";
 
             createPath(getNodobasico("RetornoMetropolitana"), getNodo("Metropolitana", 0));
             updateName("Path1", "RMetropolitana2");
 
             createPath(getNodo("Metropolitana", 1), getNodo("AeropuertoSalidaMetropolitana", 0));
             updateName("Path1", "SalidaMetropolitana");
+            model.Facility.IntelligentObjects["SalidaMetropolitana"].Properties["SelectionWeight"].Value = "0.5";
 
             createPath(getNodobasico("RetornoNorOrienteMetropolitana"), getNodo("Metropolitana", 0));
             updateName("Path1", "RRetornoNorOrienteMetropolitana2");
@@ -542,101 +557,165 @@ namespace _MYS1_Practica3_P21
             createPath(getNodo("Peten", 1), getNodo("NorOriente", 0));
             updateName("Path1", "PetenNorOriente");
             model.Facility.IntelligentObjects["PetenNorOriente"].Properties["SelectionWeight"].Value = "0.25";
+            model.Facility.IntelligentObjects["PetenNorOriente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["PetenNorOriente"].Properties["LogicalLength"].Value = "282";
 
             createPath(getNodo("Peten", 1), getNodo("Norte", 0));
             updateName("Path1", "PetenNorte");
             model.Facility.IntelligentObjects["PetenNorte"].Properties["SelectionWeight"].Value = "0.25";
+            model.Facility.IntelligentObjects["PetenNorte"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["PetenNorte"].Properties["LogicalLength"].Value = "147";
 
             //Norte
             createPath(getNodo("Norte", 1), getNodo("NorOriente", 0));
             updateName("Path1", "NortenNorOriente");
             model.Facility.IntelligentObjects["NortenNorOriente"].Properties["SelectionWeight"].Value = "0.10";
+            model.Facility.IntelligentObjects["NortenNorOriente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NortenNorOriente"].Properties["LogicalLength"].Value = "138";
 
             createPath(getNodobasico("SalidaNorteNorOccidente"), getNodo("NorOccidente", 0));
             updateName("Path1", "NorteNorOccidente");
             model.Facility.IntelligentObjects["NorteNorOccidente"].Properties["SelectionWeight"].Value = "0.10";
+            model.Facility.IntelligentObjects["NorteNorOccidente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NorteNorOccidente"].Properties["LogicalLength"].Value = "145";
 
             createPath(getNodo("Norte", 1), getNodo("Peten", 0));
             updateName("Path1", "NortePten");
             model.Facility.IntelligentObjects["NortePten"].Properties["SelectionWeight"].Value = "0.4";
+            model.Facility.IntelligentObjects["NortePten"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NortePten"].Properties["LogicalLength"].Value = "147";
 
             //NorOccidente
             createPath(getNodo("NorOccidente", 1), getNodo("Central", 0));
             updateName("Path1", "NorOccidenteCentral");
             model.Facility.IntelligentObjects["NorOccidenteCentral"].Properties["SelectionWeight"].Value = "0.10";
+            model.Facility.IntelligentObjects["NorOccidenteCentral"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NorOccidenteCentral"].Properties["LogicalLength"].Value = "269";
 
             createPath(getNodo("NorOccidente", 1), getNodo("SurOccidente", 0));
             updateName("Path1", "NorOccidenteSurOccidente");
             model.Facility.IntelligentObjects["NorOccidenteSurOccidente"].Properties["SelectionWeight"].Value = "0.30";
+            model.Facility.IntelligentObjects["NorOccidenteSurOccidente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NorOccidenteSurOccidente"].Properties["LogicalLength"].Value = "87";
 
             createPath(getNodo("NorOccidente", 1), getNodo("Norte", 0));
             updateName("Path1", "NorOccidenteNorte");
             model.Facility.IntelligentObjects["NorOccidenteNorte"].Properties["SelectionWeight"].Value = "0.20";
+            model.Facility.IntelligentObjects["NorOccidenteNorte"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NorOccidenteNorte"].Properties["LogicalLength"].Value = "145";
 
             //NorOriente
             createPath(getNodobasico("SalidaNorteNorOriente"), getNodobasico("ResTNorte"));
             updateName("Path1", "NorOrienteNorte");
             model.Facility.IntelligentObjects["NorOrienteNorte"].Properties["SelectionWeight"].Value = "0.15";
+            model.Facility.IntelligentObjects["NorOrienteNorte"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NorOrienteNorte"].Properties["LogicalLength"].Value = "138";
 
             createPath(getNodobasico("SalidaNorOccidenteNorOriente"), getNodobasico("RetornoNorOrienteMetropolitana"));
             updateName("Path1", "NorOrienteMetropolitana");
-            model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["SelectionWeight"].Value = "0.30";
+            model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["LogicalLength"].Value = "241";
 
             createPath(getNodo("NorOriente", 1), getNodo("Peten", 0));
             updateName("Path1", "NorOrientePeten");
             model.Facility.IntelligentObjects["NorOrientePeten"].Properties["SelectionWeight"].Value = "0.30";
+            model.Facility.IntelligentObjects["NorOrientePeten"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NorOrientePeten"].Properties["LogicalLength"].Value = "282";
 
             createPath(getNodo("NorOriente", 1), getNodo("SurOriente", 0));
             updateName("Path1", "NorOrienteSurOriente");
             model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["SelectionWeight"].Value = "0.05";
+            model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["LogicalLength"].Value = "231";
 
-            createPath(getNodobasico("RetornoMetropolitanaNorOriente"), getNodo("NorOriente",0));
-            updateName("Path1", "NorOrienteMetropolitana");
-            model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["SelectionWeight"].Value = "0.20";
+            //createPath(getNodobasico("RetornoMetropolitanaNorOriente"), getNodo("NorOriente",0));
+            //updateName("Path1", "NorOrienteMetropolitana");
+            //model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["SelectionWeight"].Value = "0.20";
+            //model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["DrownToScale"].Value = "False";
+            //model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["LoficalLength"].Value = "231";
 
 
             //SurOccidente
             createPath(getNodo("SurOccidente", 1), getNodo("Central", 0));
-            updateName("Path1", "SurOccidenteCentral");
+            updateName("Path1", "SurOccidenteCentral"); //path5
+            model.Facility.IntelligentObjects["SurOccidenteCentral"].Properties["SelectionWeight"].Value = "0.35";
+            model.Facility.IntelligentObjects["SurOccidenteCentral"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["SurOccidenteCentral"].Properties["LogicalLength"].Value = "155";
 
             createPath(getNodo("SurOccidente", 1), getNodo("NorOccidente", 0));
             updateName("Path1", "SurOccidenteOccidente");
+            model.Facility.IntelligentObjects["SurOccidenteOccidente"].Properties["SelectionWeight"].Value = "0.30";
+            model.Facility.IntelligentObjects["SurOccidenteOccidente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["SurOccidenteOccidente"].Properties["LogicalLength"].Value = "87";
 
 
             //SurOriente
             createPath(getNodo("SurOriente", 1), getNodobasico("ResNorOriente"));
             updateName("Path1", "SurOrienteNorOriente");
+            model.Facility.IntelligentObjects["SurOrienteNorOriente"].Properties["SelectionWeight"].Value = "0.20";
+            model.Facility.IntelligentObjects["SurOrienteNorOriente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["SurOrienteNorOriente"].Properties["LogicalLength"].Value = "231";
 
             createPath(getNodo("SurOriente", 1), getNodo("Metropolitana",0));
             updateName("Path1", "SurOrienteMetropolitana");
+            model.Facility.IntelligentObjects["SurOrienteMetropolitana"].Properties["SelectionWeight"].Value = "0.25";
+            model.Facility.IntelligentObjects["SurOrienteMetropolitana"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["SurOrienteMetropolitana"].Properties["LogicalLength"].Value = "124";
 
             createPath(getNodobasico("CentralSurOriente"), getNodo("Central",0));
             updateName("Path1", "SurOrienteCentral");
+            model.Facility.IntelligentObjects["SurOrienteCentral"].Properties["SelectionWeight"].Value = "0.15";
+            model.Facility.IntelligentObjects["SurOrienteCentral"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["SurOrienteCentral"].Properties["LogicalLength"].Value = "154";
 
             //Central 
             createPath(getNodobasico("SalidaSurOccidenteCentral"), getNodobasico("RetornoCentralSurOccidente"));
             updateName("Path1", "CentralSurOccidente");
+            model.Facility.IntelligentObjects["CentralSurOccidente"].Properties["SelectionWeight"].Value = "0.15";
+            model.Facility.IntelligentObjects["CentralSurOccidente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["CentralSurOccidente"].Properties["LogicalLength"].Value = "155";
 
             createPath(getNodo("Central",1), getNodobasico("RetornoCentralMetropolitana"));
             updateName("Path1", "CentralMetropolitana");
+            model.Facility.IntelligentObjects["CentralMetropolitana"].Properties["SelectionWeight"].Value = "0.35";
+            model.Facility.IntelligentObjects["CentralMetropolitana"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["CentralMetropolitana"].Properties["LogicalLength"].Value = "63";
 
             createPath(getNodo("Central", 1), getNodo("SurOriente",0));
-            updateName("Path1", "CentralSurOriente");
+            updateName("Path1", "PCentralSurOriente");
+            model.Facility.IntelligentObjects["PCentralSurOriente"].Properties["SelectionWeight"].Value = "0.05";
+            model.Facility.IntelligentObjects["PCentralSurOriente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["PCentralSurOriente"].Properties["LogicalLength"].Value = "155";
+
+            createPath(getNodo("Central", 1), getNodo("NorOccidente", 0));
+            updateName("Path1", "CentralNorOccidente");
+            model.Facility.IntelligentObjects["CentralNorOccidente"].Properties["SelectionWeight"].Value = "0.10";
+            model.Facility.IntelligentObjects["CentralNorOccidente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["CentralNorOccidente"].Properties["LogicalLength"].Value = "269";
 
 
             //Metropolitana
 
             createPath(getNodo("Metropolitana", 1), getNodobasico("RetornoMetropolitanaNorOriente"));
-            updateName("Path1", "MetropolitanaNorOriente");
+            updateName("Path1", "MetropolitanaNorOriente");//path6
+            model.Facility.IntelligentObjects["MetropolitanaNorOriente"].Properties["SelectionWeight"].Value = "0.20";
+            model.Facility.IntelligentObjects["MetropolitanaNorOriente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["MetropolitanaNorOriente"].Properties["LogicalLength"].Value = "241";
 
             createPath(getNodo("Metropolitana", 1), getNodobasico("MetroSurOriente"));
             updateName("Path1", "MetropolitanaSurOriente");
+            model.Facility.IntelligentObjects["MetropolitanaSurOriente"].Properties["SelectionWeight"].Value = "0.15";
+            model.Facility.IntelligentObjects["MetropolitanaSurOriente"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["MetropolitanaSurOriente"].Properties["LogicalLength"].Value = "124";
 
             createPath(getNodo("Metropolitana", 1), getNodo("Central", 0));
             updateName("Path1", "MetropolitanaCentrall");
+            model.Facility.IntelligentObjects["MetropolitanaCentrall"].Properties["SelectionWeight"].Value = "0.30";
+            model.Facility.IntelligentObjects["MetropolitanaCentrall"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["MetropolitanaCentrall"].Properties["LogicalLength"].Value = "63";
 
 
-            
+
 
         }
 
