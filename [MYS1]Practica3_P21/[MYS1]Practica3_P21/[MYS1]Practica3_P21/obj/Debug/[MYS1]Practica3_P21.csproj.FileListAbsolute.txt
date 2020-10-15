@@ -20,3 +20,14 @@ C:\Users\herre\Desktop\Practica3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]P
 C:\Users\herre\Desktop\Practica3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.csproj.CopyComplete
 C:\Users\herre\Desktop\Practica3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.exe
 C:\Users\herre\Desktop\Practica3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.pdb
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\bin\Debug\[MYS1]Practica3_P21.exe.config
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\bin\Debug\[MYS1]Practica3_P21.exe
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\bin\Debug\[MYS1]Practica3_P21.pdb
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.csprojAssemblyReference.cache
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\_MYS1_Practica3_P21.Form1.resources
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\_MYS1_Practica3_P21.Properties.Resources.resources
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.csproj.GenerateResource.cache
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.csproj.CoreCompileInputs.cache
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.csproj.CopyComplete
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.exe
+C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.pdb

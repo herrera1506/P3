@@ -225,21 +225,37 @@ namespace _MYS1_Practica3_P21
             //Server 
             createServer(0, 0);
             updateName("Server1", "Metropolitana");
+            model.Facility.IntelligentObjects["Metropolitana"].Properties["ProcessingTime"].Value = "Random.Exponential(4)";
+            model.Facility.IntelligentObjects["Output@Metropolitana"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
             createServer(5, -20);
             updateName("Server1", "Norte");
+            model.Facility.IntelligentObjects["Norte"].Properties["ProcessingTime"].Value = "Random.Exponential(5)";
+            model.Facility.IntelligentObjects["Output@Norte"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
             createServer(30, -10);
             updateName("Server1", "NorOriente");
+            model.Facility.IntelligentObjects["NorOriente"].Properties["ProcessingTime"].Value = "Random.Exponential(3)";
+            model.Facility.IntelligentObjects["Output@NorOriente"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
             createServer(15, 20);
             updateName("Server1", "SurOriente");
+            model.Facility.IntelligentObjects["SurOriente"].Properties["ProcessingTime"].Value = "Random.Exponential(4)";
+            model.Facility.IntelligentObjects["Output@SurOriente"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
             createServer(-15, 20);
             updateName("Server1", "Central");
+            model.Facility.IntelligentObjects["Central"].Properties["ProcessingTime"].Value = "Random.Exponential(5)";
+            model.Facility.IntelligentObjects["Output@Central"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
             createServer(-40, 10);
             updateName("Server1", "SurOccidente");
+            model.Facility.IntelligentObjects["SurOccidente"].Properties["ProcessingTime"].Value = "Random.Exponential(3)";
+            model.Facility.IntelligentObjects["Output@SurOccidente"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
             createServer(-40, -20);
             updateName("Server1", "NorOccidente");
+            model.Facility.IntelligentObjects["NorOccidente"].Properties["ProcessingTime"].Value = "Random.Exponential(6)";
+            model.Facility.IntelligentObjects["Output@NorOccidente"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
             createServer(10, -50);
             updateName("Server1", "Peten");
-            
+            model.Facility.IntelligentObjects["Peten"].Properties["ProcessingTime"].Value = "Random.Exponential(4)";
+            model.Facility.IntelligentObjects["Output@Peten"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
+
         }
 
         public void createCardinals()
@@ -259,9 +275,12 @@ namespace _MYS1_Practica3_P21
             //Peten
             createSource(2, -51);
             updateName("Source1", "TuristasNacionalesPeten");
+            model.Facility.IntelligentObjects["TuristasNacionalesPeten"].Properties["InterarrivalTime"].Value = "Random.Poisson(4)";
 
             createSource(2,-48);
             updateName("Source1", "TuristasInternacionalesPeten");
+            model.Facility.IntelligentObjects["TuristasInternacionalesPeten"].Properties["InterarrivalTime"].Value = "Random.Exponential(50)";
+            model.Facility.IntelligentObjects["TuristasInternacionalesPeten"].Properties["EntitiesPerArrival"].Value = "40";
 
             createSink(18, -50);
             updateName("Sink1", "AeropuertoSalidaP");
@@ -271,11 +290,13 @@ namespace _MYS1_Practica3_P21
 
             createPath(getNodo("TuristasNacionalesPeten", 0), getNodo("Peten", 0));
             updateName("Path1", "NTuristasPeten");
+
             createPath(getNodo("TuristasInternacionalesPeten", 0), getNodo("Peten", 0));
             updateName("Path1", "ITuristasPeten");
 
             createPath(getNodo("Peten", 1), getNodobasico("RetornoPeten"));
             updateName("Path1", "RPeten");
+            model.Facility.IntelligentObjects["RPeten"].Properties["SelectionWeight"].Value = "0.5";
 
             createPath(getNodobasico("RetornoPeten"), getNodo("Peten", 0));
             updateName("Path1", "RPeten2");
@@ -284,11 +305,10 @@ namespace _MYS1_Practica3_P21
             updateName("Path1", "SalidaPeten");
 
 
-            //Norte 
-
+            //Norte
             createSource(-2, -22);
             updateName("Source1", "TuristasNacionalesNorte");
-
+            model.Facility.IntelligentObjects["TuristasNacionalesNorte"].Properties["InterarrivalTime"].Value = "Random.Poisson(8)";
             //source - server
             createPath(getNodo("TuristasNacionalesNorte", 0), getNodo("Norte", 0));
             updateName("Path1", "NTuristasNorte");
@@ -298,7 +318,8 @@ namespace _MYS1_Practica3_P21
 
             createTransferNode(3, -15);
             updateName("TransferNode1", "ResTNorte");
-
+            
+            
             createTransferNode(3, -32);
             updateName("TransferNode1", "SalidaNorteNorOccidente");
 
@@ -308,6 +329,7 @@ namespace _MYS1_Practica3_P21
             //output server - transfer
             createPath(getNodo("Norte", 1), getNodobasico("RetornoNorte"));
             updateName("Path1", "RNorte1");
+            model.Facility.IntelligentObjects["RNorte1"].Properties["SelectionWeight"].Value = "0.4";
 
             createPath(getNodobasico("ResTNorte"), getNodo("Norte", 0));
             updateName("Path1", "ResNorte1");
@@ -315,10 +337,12 @@ namespace _MYS1_Practica3_P21
             createPath(getNodo("Norte", 0 ), getNodobasico("SalidaNorteNorOccidente"));
             updateName("Path1", "PSalidaNorteNorOccidente");
 
-            //NorOccidente
 
+
+            //NorOccidente
             createSource(-48, -22);
             updateName("Source1", "TuristasNacionalesNorOccidente");
+            model.Facility.IntelligentObjects["TuristasNacionalesNorOccidente"].Properties["InterarrivalTime"].Value = "Random.Poisson(12)";
             //source -server
             createPath(getNodo("TuristasNacionalesNorOccidente", 0), getNodo("NorOccidente", 0));
             updateName("Path1", "NTuristasNorOccidente");
@@ -333,13 +357,14 @@ namespace _MYS1_Practica3_P21
             //output server -transerf 
             createPath(getNodo("NorOccidente", 1), getNodobasico("RetornoNorOccidente"));
             updateName("Path1", "RNorOccidente");
+            model.Facility.IntelligentObjects["RNorOccidente"].Properties["SelectionWeight"].Value = "0.4";
 
-            
-            
+
+
             //NorOriente
-
             createSource(18, -12);
             updateName("Source1", "TuristasNacionalesNorOriente");
+            model.Facility.IntelligentObjects["TuristasNacionalesNorOriente"].Properties["InterarrivalTime"].Value = "Random.Poisson(6)";
             //source - server
             createPath(getNodo("TuristasNacionalesNorOriente", 0), getNodo("NorOriente", 0));
             updateName("Path1", "NTuristasNorOriente");
@@ -364,12 +389,13 @@ namespace _MYS1_Practica3_P21
 
             createPath(getNodo("NorOriente", 1), getNodobasico("RetornoNorOriente"));
             updateName("Path1", "RNorOriente");
+            model.Facility.IntelligentObjects["RNorOriente"].Properties["SelectionWeight"].Value = "0.20";
 
             createPath(getNodobasico("ResNorOriente"), getNodo("NorOriente",0));
             updateName("Path1", "ResNorOriente");
 
             createPath(getNodo("NorOriente", 1), getNodobasico("SalidaNorteNorOriente"));
-            updateName("Path1", "ResNorteNorOriente");
+            updateName("Path1", "PSalidaNorteNorOriente");
 
             createPath(getNodo("NorOriente", 1), getNodobasico("SalidaNorOccidenteNorOriente"));
             updateName("Path1", "ResNorOccidenteNorOriente");
@@ -378,9 +404,11 @@ namespace _MYS1_Practica3_P21
             //SurOriente
             createSource(7, 18);
             updateName("Source1", "TuristasNacionalesSurOriente");
+            model.Facility.IntelligentObjects["TuristasNacionalesSurOriente"].Properties["InterarrivalTime"].Value = "Random.Poisson(10)";
 
             createPath(getNodo("TuristasNacionalesSurOriente", 0), getNodo("SurOriente", 0));
             updateName("Path1", "NTuristasNorOriente");
+
 
             createTransferNode(15, 23);
             updateName("TransferNode1", "RetornoSurOriente");
@@ -406,6 +434,7 @@ namespace _MYS1_Practica3_P21
             //Central
             createSource(-23, 19);
             updateName("Source1", "TuristasNacionalesCentral");
+            model.Facility.IntelligentObjects["TuristasNacionalesCentral"].Properties["InterarrivalTime"].Value = "Random.Poisson(3)";
 
             createPath(getNodo("TuristasNacionalesCentral", 0), getNodo("Central", 0));
             updateName("Path1", "NTuristasCentral");
@@ -429,9 +458,13 @@ namespace _MYS1_Practica3_P21
 
             createSource(-46, 8);
             updateName("Source1", "TuristasNacionalesSurOccidente");
+            model.Facility.IntelligentObjects["TuristasNacionalesSurOccidente"].Properties["InterarrivalTime"].Value = "Random.Poisson(4)";
 
             createSource(-46, 11);
             updateName("Source1", "TuristasInternacionalesSurOccidente");
+            model.Facility.IntelligentObjects["TuristasInternacionalesSurOccidente"].Properties["InterarrivalTime"].Value = "Random.Exponential(70)";
+            model.Facility.IntelligentObjects["TuristasInternacionalesSurOccidente"].Properties["EntitiesPerArrival"].Value = "30";
+
 
             createSink(-32, 8);
             updateName("Sink1", "AeropuertoSalidaSurOccidente");
@@ -464,9 +497,11 @@ namespace _MYS1_Practica3_P21
 
             createSource(-8, -1);
             updateName("Source1", "TuristasNacionalesMetropolitana");
-
+            model.Facility.IntelligentObjects["TuristasNacionalesMetropolitana"].Properties["InterarrivalTime"].Value = "Random.Poisson(2)";
             createSource(-8,1);
             updateName("Source1", "TuristasInternacionalesMetropolitana");
+            model.Facility.IntelligentObjects["TuristasInternacionalesMetropolitana"].Properties["InterarrivalTime"].Value = "Random.Exponential(35)";
+            model.Facility.IntelligentObjects["TuristasInternacionalesMetropolitana"].Properties["EntitiesPerArrival"].Value = "70";
 
             createSink(7, -3);
             updateName("Sink1", "AeropuertoSalidaMetropolitana");
@@ -506,46 +541,58 @@ namespace _MYS1_Practica3_P21
             //Peten
             createPath(getNodo("Peten", 1), getNodo("NorOriente", 0));
             updateName("Path1", "PetenNorOriente");
+            model.Facility.IntelligentObjects["PetenNorOriente"].Properties["SelectionWeight"].Value = "0.25";
 
             createPath(getNodo("Peten", 1), getNodo("Norte", 0));
             updateName("Path1", "PetenNorte");
+            model.Facility.IntelligentObjects["PetenNorte"].Properties["SelectionWeight"].Value = "0.25";
 
             //Norte
             createPath(getNodo("Norte", 1), getNodo("NorOriente", 0));
             updateName("Path1", "NortenNorOriente");
+            model.Facility.IntelligentObjects["NortenNorOriente"].Properties["SelectionWeight"].Value = "0.10";
 
             createPath(getNodobasico("SalidaNorteNorOccidente"), getNodo("NorOccidente", 0));
-            updateName("Path1", "NorteNorOriente");
+            updateName("Path1", "NorteNorOccidente");
+            model.Facility.IntelligentObjects["NorteNorOccidente"].Properties["SelectionWeight"].Value = "0.10";
 
             createPath(getNodo("Norte", 1), getNodo("Peten", 0));
             updateName("Path1", "NortePten");
+            model.Facility.IntelligentObjects["NortePten"].Properties["SelectionWeight"].Value = "0.4";
 
             //NorOccidente
-
             createPath(getNodo("NorOccidente", 1), getNodo("Central", 0));
             updateName("Path1", "NorOccidenteCentral");
+            model.Facility.IntelligentObjects["NorOccidenteCentral"].Properties["SelectionWeight"].Value = "0.10";
 
             createPath(getNodo("NorOccidente", 1), getNodo("SurOccidente", 0));
             updateName("Path1", "NorOccidenteSurOccidente");
+            model.Facility.IntelligentObjects["NorOccidenteSurOccidente"].Properties["SelectionWeight"].Value = "0.30";
 
             createPath(getNodo("NorOccidente", 1), getNodo("Norte", 0));
             updateName("Path1", "NorOccidenteNorte");
+            model.Facility.IntelligentObjects["NorOccidenteNorte"].Properties["SelectionWeight"].Value = "0.20";
 
             //NorOriente
             createPath(getNodobasico("SalidaNorteNorOriente"), getNodobasico("ResTNorte"));
             updateName("Path1", "NorOrienteNorte");
+            model.Facility.IntelligentObjects["NorOrienteNorte"].Properties["SelectionWeight"].Value = "0.15";
 
             createPath(getNodobasico("SalidaNorOccidenteNorOriente"), getNodobasico("RetornoNorOrienteMetropolitana"));
             updateName("Path1", "NorOrienteMetropolitana");
+            model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["SelectionWeight"].Value = "0.30";
 
             createPath(getNodo("NorOriente", 1), getNodo("Peten", 0));
             updateName("Path1", "NorOrientePeten");
+            model.Facility.IntelligentObjects["NorOrientePeten"].Properties["SelectionWeight"].Value = "0.30";
 
             createPath(getNodo("NorOriente", 1), getNodo("SurOriente", 0));
             updateName("Path1", "NorOrienteSurOriente");
+            model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["SelectionWeight"].Value = "0.05";
 
             createPath(getNodobasico("RetornoMetropolitanaNorOriente"), getNodo("NorOriente",0));
             updateName("Path1", "NorOrienteMetropolitana");
+            model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["SelectionWeight"].Value = "0.20";
 
 
             //SurOccidente
