@@ -586,7 +586,7 @@ namespace _MYS1_Practica3_P21
             updateName("Path1", "MetropolitanaSurOriente");
 
             createPath(getNodo("Metropolitana", 1), getNodo("Central", 0));
-            updateName("Path1", "MetropolitanaCentral");
+            updateName("Path1", "MetropolitanaCentrall");
 
 
             
