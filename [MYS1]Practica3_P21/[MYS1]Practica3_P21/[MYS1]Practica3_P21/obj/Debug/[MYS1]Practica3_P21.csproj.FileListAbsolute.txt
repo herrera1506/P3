@@ -31,3 +31,14 @@ C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P
 C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.csproj.CopyComplete
 C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.exe
 C:\Users\herre\Desktop\Practica3_Modela\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.pdb
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\bin\Debug\[MYS1]Practica3_P21.exe.config
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\bin\Debug\[MYS1]Practica3_P21.exe
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\bin\Debug\[MYS1]Practica3_P21.pdb
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.csprojAssemblyReference.cache
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\_MYS1_Practica3_P21.Form1.resources
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\_MYS1_Practica3_P21.Properties.Resources.resources
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.csproj.GenerateResource.cache
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.csproj.CoreCompileInputs.cache
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.csproj.CopyComplete
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.exe
+C:\Users\Aldair Estrada\Documents\2S 2020\Modelacion y Simulacion 1\Clase Laboratorio\Practicas\Practica 3\P3\[MYS1]Practica3_P21\[MYS1]Practica3_P21\[MYS1]Practica3_P21\obj\Debug\[MYS1]Practica3_P21.pdb
