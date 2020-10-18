@@ -22,5 +22,11 @@ namespace _MYS1_Practica3_P21
             ApiSimio demo = new ApiSimio();
             demo.createModel();
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            ApiCarnet carnet = new ApiCarnet();
+            carnet.createCarnetModel();
+        }
     }
 }

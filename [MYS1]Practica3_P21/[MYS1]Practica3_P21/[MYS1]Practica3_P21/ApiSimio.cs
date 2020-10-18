@@ -57,6 +57,7 @@ namespace _MYS1_Practica3_P21
             updateName("Conveyor1", "Mexico");
             updateProperty("Mexico", "DrawnToScale", "False");
             updateProperty("Mexico", "LogicalLength", "200000");
+            //updateProperty("Mexico", "LogicalUnits", "Kilometers");
             createTransferNode(-20, -70);
             updateName("TransferNode1", "TN3");
             createConveyor(getNodobasico("TN2"), getNodobasico("TN3"));
