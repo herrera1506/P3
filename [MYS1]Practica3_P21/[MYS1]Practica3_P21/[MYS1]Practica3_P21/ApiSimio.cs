@@ -896,8 +896,6 @@ namespace _MYS1_Practica3_P21
         {
             intelligentObjects.CreateLink(type, nodo1, nodo2, null);
             
-            
-
         }
 
 
@@ -906,7 +904,6 @@ namespace _MYS1_Practica3_P21
         public void updateProperty(String name, String property, String value)
         {
             model.Facility.IntelligentObjects[name].Properties[property].Value = value;
-            //model.Facility.IntelligentObjects[name].Properties[property]
         }
 
         //--------------------------------------- Modificar nombre  -----------------------------------//
