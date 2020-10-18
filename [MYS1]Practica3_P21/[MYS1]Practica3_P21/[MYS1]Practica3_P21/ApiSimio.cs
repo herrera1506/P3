@@ -742,11 +742,12 @@ namespace _MYS1_Practica3_P21
             model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["LogicalLength"].Value = "231000";
             model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            //createPath(getNodobasico("RetornoMetropolitanaNorOriente"), getNodo("NorOriente",0));
-            //updateName("Path1", "NorOrienteMetropolitana");
+            createConveyor(getNodobasico("RetornoMetropolitanaNorOriente"), getNodo("NorOriente",0));
+            updateName("Conveyor1", "NorOrienteMetropolitana2");
             //model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["SelectionWeight"].Value = "0.20";
-            //model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["DrownToScale"].Value = "False";
-            //model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["LoficalLength"].Value = "231";
+            model.Facility.IntelligentObjects["NorOrienteMetropolitana2"].Properties["DrawnToScale"].Value = "False";
+            model.Facility.IntelligentObjects["NorOrienteMetropolitana2"].Properties["LogicalLength"].Value = "241";
+            model.Facility.IntelligentObjects["NorOrienteMetropolitana2"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
 
             //SurOccidente
