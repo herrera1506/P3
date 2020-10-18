@@ -337,26 +337,31 @@ namespace _MYS1_Practica3_P21
             model.Facility.IntelligentObjects["DecisionMundoMaya"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
 
             //Nacionales
-            createPath(getNodo("TuristasNacionalesPeten", 0), getNodo("Peten", 0));
-            updateName("Path1", "NTuristasPeten");
+            createConveyor(getNodo("TuristasNacionalesPeten", 0), getNodo("Peten", 0));
+            updateName("Conveyor1", "NTuristasPeten");
+            model.Facility.IntelligentObjects["NTuristasPeten"].Properties["InitialDesiredSpeed"].Value = "19.44";
             //Internacionales
-            createPath(getNodo("TuristasInternacionalesPeten", 0), getNodo("Peten", 0));
-            updateName("Path1", "ITuristasPeten");
+            createConveyor(getNodo("TuristasInternacionalesPeten", 0), getNodo("Peten", 0));
+            updateName("Conveyor1", "ITuristasPeten");
+            model.Facility.IntelligentObjects["ITuristasPeten"].Properties["InitialDesiredSpeed"].Value = "19.44";
             //Retorno a pente
-            createPath(getNodo("Peten", 1), getNodo("RetornoPeten",0));
-            updateName("Path1", "RPeten");
+            createConveyor(getNodo("Peten", 1), getNodo("RetornoPeten",0));
+            updateName("Conveyor1", "RPeten");
             model.Facility.IntelligentObjects["RPeten"].Properties["SelectionWeight"].Value = "0.5";
+            model.Facility.IntelligentObjects["RPeten"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
             //createPath(getNodobasico("RetornoPeten"), getNodobasico("DecisionMundoMaya"));
             //updateName("Path1", "RPeten2");
             //Salida del pais 
-            createPath(getNodobasico("DecisionMundoMaya"), getNodo("AeropuertoSalidaP", 0));
-            updateName("Path1", "SalidaPeten");
+            createConveyor(getNodobasico("DecisionMundoMaya"), getNodo("AeropuertoSalidaP", 0));
+            updateName("Conveyor1", "SalidaPeten");
             model.Facility.IntelligentObjects["SalidaPeten"].Properties["SelectionWeight"].Value = "0.3";
+            model.Facility.IntelligentObjects["SalidaPeten"].Properties["InitialDesiredSpeed"].Value = "19.44";
             //retorno a info peten 
-            createPath(getNodobasico("DecisionMundoMaya"), getNodo("Peten", 0));
-            updateName("Path1", "RetornoInfoPeten");
+            createConveyor(getNodobasico("DecisionMundoMaya"), getNodo("Peten", 0));
+            updateName("Conveyor1", "RetornoInfoPeten");
             model.Facility.IntelligentObjects["RetornoInfoPeten"].Properties["SelectionWeight"].Value = "0.7";
+            model.Facility.IntelligentObjects["RetornoInfoPeten"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
 
             //Norte
@@ -364,8 +369,9 @@ namespace _MYS1_Practica3_P21
             updateName("Source1", "TuristasNacionalesNorte");
             model.Facility.IntelligentObjects["TuristasNacionalesNorte"].Properties["InterarrivalTime"].Value = "Random.Poisson(8)";
             //source - server
-            createPath(getNodo("TuristasNacionalesNorte", 0), getNodo("Norte", 0));
-            updateName("Path1", "NTuristasNorte");
+            createConveyor(getNodo("TuristasNacionalesNorte", 0), getNodo("Norte", 0));
+            updateName("Conveyor1", "NTuristasNorte");
+            model.Facility.IntelligentObjects["NTuristasNorte"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
             createSink(5, -23);
             updateName("Sink1", "RetornoNorte");
@@ -381,16 +387,18 @@ namespace _MYS1_Practica3_P21
             //createPath(getNodobasico("RetornoNorte"), getNodo("Norte", 0));
             //updateName("Path1", "RNorte2");
             //output server - transfer
-            createPath(getNodo("Norte", 1), getNodo("RetornoNorte",0));
-            updateName("Path1", "RNorte1");
+            createConveyor(getNodo("Norte", 1), getNodo("RetornoNorte",0));
+            updateName("Conveyor1", "RNorte1");
             model.Facility.IntelligentObjects["RNorte1"].Properties["SelectionWeight"].Value = "0.4";
 
-            createPath(getNodobasico("ResTNorte"), getNodo("Norte", 0));
-            updateName("Path1", "ResNorte1");
+            createConveyor(getNodobasico("ResTNorte"), getNodo("Norte", 0));
+            updateName("Conveyor1", "ResNorte1");
+            model.Facility.IntelligentObjects["ResNorte1"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodo("Norte", 1 ), getNodobasico("SalidaNorteNorOccidente"));
-            updateName("Path1", "PSalidaNorteNorOccidente");
+            createConveyor(getNodo("Norte", 1 ), getNodobasico("SalidaNorteNorOccidente"));
+            updateName("Conveyor1", "PSalidaNorteNorOccidente");
             model.Facility.IntelligentObjects["PSalidaNorteNorOccidente"].Properties["SelectionWeight"].Value = "0.1";
+            model.Facility.IntelligentObjects["PSalidaNorteNorOccidente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
 
 
@@ -399,8 +407,9 @@ namespace _MYS1_Practica3_P21
             updateName("Source1", "TuristasNacionalesNorOccidente");
             model.Facility.IntelligentObjects["TuristasNacionalesNorOccidente"].Properties["InterarrivalTime"].Value = "Random.Poisson(12)";
             //source -server
-            createPath(getNodo("TuristasNacionalesNorOccidente", 0), getNodo("NorOccidente", 0));
-            updateName("Path1", "NTuristasNorOccidente");
+            createConveyor(getNodo("TuristasNacionalesNorOccidente", 0), getNodo("NorOccidente", 0));
+            updateName("Conveyor1", "NTuristasNorOccidente");
+            model.Facility.IntelligentObjects["NTuristasNorOccidente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
             createSink(-40, -23);
             updateName("Sink1", "RetornoNorOccidente");
@@ -410,9 +419,10 @@ namespace _MYS1_Practica3_P21
             //updateName("Path1", "RNorOccidente2");
 
             //output server -transerf 
-            createPath(getNodo("NorOccidente", 1), getNodo("RetornoNorOccidente",0));
-            updateName("Path1", "RNorOccidente");
+            createConveyor(getNodo("NorOccidente", 1), getNodo("RetornoNorOccidente",0));
+            updateName("Conveyor1", "RNorOccidente");
             model.Facility.IntelligentObjects["RNorOccidente"].Properties["SelectionWeight"].Value = "0.40";
+            model.Facility.IntelligentObjects["RNorOccidente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
 
 
@@ -421,8 +431,9 @@ namespace _MYS1_Practica3_P21
             updateName("Source1", "TuristasNacionalesNorOriente");
             model.Facility.IntelligentObjects["TuristasNacionalesNorOriente"].Properties["InterarrivalTime"].Value = "Random.Poisson(6)";
             //source - server
-            createPath(getNodo("TuristasNacionalesNorOriente", 0), getNodo("NorOriente", 0));
-            updateName("Path1", "NTuristasNorOriente");
+            createConveyor(getNodo("TuristasNacionalesNorOriente", 0), getNodo("NorOriente", 0));
+            updateName("Conveyor1", "NTuristasNorOriente");
+            model.Facility.IntelligentObjects["NTuristasNorOriente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
             createSink(30, -13);
             updateName("Sink1", "RetornoNorOriente");
@@ -440,20 +451,23 @@ namespace _MYS1_Practica3_P21
             updateName("TransferNode1", "RetornoMetropolitanaNorOriente");
 
 
-            createPath(getNodo("NorOriente", 1), getNodo("RetornoNorOriente",0));
-            updateName("Path1", "RNorOriente");
+            createConveyor(getNodo("NorOriente", 1), getNodo("RetornoNorOriente",0));
+            updateName("Conveyor1", "RNorOriente");
             model.Facility.IntelligentObjects["RNorOriente"].Properties["SelectionWeight"].Value = "0.20";
+            model.Facility.IntelligentObjects["RNorOriente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodobasico("ResNorOriente"), getNodo("NorOriente",0));
-            updateName("Path1", "ResNorOriente");
+            createConveyor(getNodobasico("ResNorOriente"), getNodo("NorOriente",0));
+            updateName("Conveyor1", "ResNorOriente");
 
-            createPath(getNodo("NorOriente", 1), getNodobasico("SalidaNorteNorOriente"));
-            updateName("Path2", "PathSalidaNorteNorOriente"); //path2
+            createConveyor(getNodo("NorOriente", 1), getNodobasico("SalidaNorteNorOriente"));
+            updateName("Conveyor1", "PathSalidaNorteNorOriente"); //path2
             model.Facility.IntelligentObjects["PathSalidaNorteNorOriente"].Properties["SelectionWeight"].Value = "0.15";
+            model.Facility.IntelligentObjects["PathSalidaNorteNorOriente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodo("NorOriente", 1), getNodobasico("SalidaMetropolintanaNorOriente"));
-            updateName("Path2", "ResNorOccidenteNorOriente");
+            createConveyor(getNodo("NorOriente", 1), getNodobasico("SalidaMetropolintanaNorOriente"));
+            updateName("Conveyor1", "ResNorOccidenteNorOriente");
             model.Facility.IntelligentObjects["ResNorOccidenteNorOriente"].Properties["SelectionWeight"].Value = "0.30";
+            model.Facility.IntelligentObjects["ResNorOccidenteNorOriente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
 
             //SurOriente
@@ -461,8 +475,9 @@ namespace _MYS1_Practica3_P21
             updateName("Source1", "TuristasNacionalesSurOriente");
             model.Facility.IntelligentObjects["TuristasNacionalesSurOriente"].Properties["InterarrivalTime"].Value = "Random.Poisson(10)";
 
-            createPath(getNodo("TuristasNacionalesSurOriente", 0), getNodo("SurOriente", 0));
-            updateName("Path2", "NTuristasNorOriente");
+            createConveyor(getNodo("TuristasNacionalesSurOriente", 0), getNodo("SurOriente", 0));
+            updateName("Conveyor1", "NTuristasNorOriente");
+            model.Facility.IntelligentObjects["NTuristasNorOriente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
 
             createSink(15, 23);
@@ -477,17 +492,20 @@ namespace _MYS1_Practica3_P21
             //createPath(getNodobasico("RetornoSurOriente"), getNodo("SurOriente", 0));
             //updateName("Path3", "RSurOriente2"); //Path3
 
-            createPath(getNodo("SurOriente", 1), getNodo("RetornoSurOriente",0));
-            updateName("Path3", "RSurOriente");
+            createConveyor(getNodo("SurOriente", 1), getNodo("RetornoSurOriente",0));
+            updateName("Conveyor1", "RSurOriente");
             model.Facility.IntelligentObjects["RSurOriente"].Properties["SelectionWeight"].Value = "0.4";
+            model.Facility.IntelligentObjects["RSurOriente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
 
-            createPath(getNodobasico("MetroSurOriente"), getNodo("SurOriente", 0));
-            updateName("Path3", "PMetroSurOriente");
+            createConveyor(getNodobasico("MetroSurOriente"), getNodo("SurOriente", 0));
+            updateName("Conveyor1", "PMetroSurOriente");
+            model.Facility.IntelligentObjects["PMetroSurOriente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodo("SurOriente",1), getNodobasico("CentralSurOriente"));
-            updateName("Path3", "SalidaCentralSurOriente");
+            createConveyor(getNodo("SurOriente",1), getNodobasico("CentralSurOriente"));
+            updateName("Conveyor1", "SalidaCentralSurOriente");
             model.Facility.IntelligentObjects["SalidaCentralSurOriente"].Properties["SelectionWeight"].Value = "0.15";
+            model.Facility.IntelligentObjects["SalidaCentralSurOriente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
 
             //Central
@@ -495,8 +513,9 @@ namespace _MYS1_Practica3_P21
             updateName("Source1", "TuristasNacionalesCentral");
             model.Facility.IntelligentObjects["TuristasNacionalesCentral"].Properties["InterarrivalTime"].Value = "Random.Poisson(3)";
 
-            createPath(getNodo("TuristasNacionalesCentral", 0), getNodo("Central", 0));
-            updateName("Path1", "NTuristasCentral");
+            createConveyor(getNodo("TuristasNacionalesCentral", 0), getNodo("Central", 0));
+            updateName("Conveyor1", "NTuristasCentral");
+            model.Facility.IntelligentObjects["NTuristasCentral"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
             createSink(-15, 23);
             updateName("Sink1", "RetornoCentral");
@@ -507,13 +526,14 @@ namespace _MYS1_Practica3_P21
             //createPath(getNodobasico("RetornoCentral"), getNodo("Central", 0));
             //updateName("Path1", "RCentral2");
 
-            createPath(getNodo("Central", 1), getNodo("RetornoCentral",0));
-            updateName("Path1", "RCentral");
+            createConveyor(getNodo("Central", 1), getNodo("RetornoCentral",0));
+            updateName("Conveyor1", "RCentral");
             model.Facility.IntelligentObjects["RCentral"].Properties["SelectionWeight"].Value = "0.35";
+            model.Facility.IntelligentObjects["RCentral"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodo("Central", 1), getNodobasico("SalidaSurOccidenteCentral"));
-            updateName("Path1", "SalidaSurOccidenteCentral");
-
+            createConveyor(getNodo("Central", 1), getNodobasico("SalidaSurOccidenteCentral"));
+            updateName("Conveyor1", "PSalidaSurOccidenteCentral");
+            model.Facility.IntelligentObjects["PSalidaSurOccidenteCentral"].Properties["InitialDesiredSpeed"].Value = "19.44";
             //Sur Occidente
 
             createSource(-46, 5);
@@ -524,6 +544,7 @@ namespace _MYS1_Practica3_P21
             updateName("Source1", "TuristasInternacionalesSurOccidente");
             model.Facility.IntelligentObjects["TuristasInternacionalesSurOccidente"].Properties["InterarrivalTime"].Value = "Random.Exponential(70)";
             model.Facility.IntelligentObjects["TuristasInternacionalesSurOccidente"].Properties["EntitiesPerArrival"].Value = "30";
+
 
             createSink(-46, 17);
             updateName("Sink1", "AeropuertoSalidaSurOccidente");
@@ -538,30 +559,35 @@ namespace _MYS1_Practica3_P21
             updateName("TransferNode1", "DecisionInternacionalQuetzaltenango");
             model.Facility.IntelligentObjects["DecisionInternacionalQuetzaltenango"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
 
-            createPath(getNodo("TuristasNacionalesSurOccidente", 0), getNodo("SurOccidente", 0));
-            updateName("Path4", "NTuristasSurOccidente"); //path4
+            createConveyor(getNodo("TuristasNacionalesSurOccidente", 0), getNodo("SurOccidente", 0));
+            updateName("Conveyor1", "NTuristasSurOccidente"); //path4
+            model.Facility.IntelligentObjects["NTuristasSurOccidente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodo("TuristasInternacionalesSurOccidente", 0), getNodo("SurOccidente", 0));
-            updateName("Path4", "ITuristasSurOccidente");
+            createConveyor(getNodo("TuristasInternacionalesSurOccidente", 0), getNodo("SurOccidente", 0));
+            updateName("Conveyor1", "ITuristasSurOccidente");
+            model.Facility.IntelligentObjects["ITuristasSurOccidente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodo("SurOccidente", 1), getNodo("RetornoSurOccidente",0));
-            updateName("Path4", "RSurOccidente");
+            createConveyor(getNodo("SurOccidente", 1), getNodo("RetornoSurOccidente",0));
+            updateName("Conveyor1", "RSurOccidente");
             model.Facility.IntelligentObjects["RSurOccidente"].Properties["SelectionWeight"].Value = "0.35";
+            model.Facility.IntelligentObjects["RSurOccidente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
             //createPath(getNodobasico("RetornoSurOccidente"), getNodobasico("DecisionInternacionalQuetzaltenango"));
             //updateName("Path4", "RertornoDesicion");
 
-            createPath(getNodobasico("DecisionInternacionalQuetzaltenango"), getNodo("AeropuertoSalidaSurOccidente",0));
-            updateName("Path4", "SalidaInternacional");
+            createConveyor(getNodobasico("DecisionInternacionalQuetzaltenango"), getNodo("AeropuertoSalidaSurOccidente",0));
+            updateName("Conveyor1", "SalidaInternacional");
             model.Facility.IntelligentObjects["SalidaInternacional"].Properties["SelectionWeight"].Value = "0.4";
+            model.Facility.IntelligentObjects["SalidaInternacional"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodobasico("DecisionInternacionalQuetzaltenango"), getNodo("SurOccidente", 0));
-            updateName("Path4", "RetornoIngoSurOccidente");
+            createConveyor(getNodobasico("DecisionInternacionalQuetzaltenango"), getNodo("SurOccidente", 0));
+            updateName("Conveyor1", "RetornoIngoSurOccidente");
             model.Facility.IntelligentObjects["RetornoIngoSurOccidente"].Properties["SelectionWeight"].Value = "0.6";
+            model.Facility.IntelligentObjects["RetornoIngoSurOccidente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodobasico("RetornoCentralSurOccidente"), getNodobasico("DecisionInternacionalQuetzaltenango"));
-            updateName("Path4", "RetornoInfoCentralSurOccidente");
-
+            createConveyor(getNodobasico("RetornoCentralSurOccidente"), getNodobasico("DecisionInternacionalQuetzaltenango"));
+            updateName("Conveyor1", "RetornoInfoCentralSurOccidente");
+            model.Facility.IntelligentObjects["RetornoInfoCentralSurOccidente"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
             //Metropolitana
 
@@ -589,32 +615,39 @@ namespace _MYS1_Practica3_P21
             updateName("TransferNode1", "DecisionLaAurora");
             model.Facility.IntelligentObjects["DecisionLaAurora"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
 
-            createPath(getNodo("TuristasNacionalesMetropolitana", 0), getNodo("Metropolitana", 0));
-            updateName("Path4", "NTuristasMetropolitana");
+            createConveyor(getNodo("TuristasNacionalesMetropolitana", 0), getNodo("Metropolitana", 0));
+            updateName("Conveyor1", "NTuristasMetropolitana");
+            model.Facility.IntelligentObjects["NTuristasMetropolitana"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodo("TuristasInternacionalesMetropolitana", 0), getNodo("Metropolitana", 0));
-            updateName("Path4", "ITuristasMetropolitana");
+            createConveyor(getNodo("TuristasInternacionalesMetropolitana", 0), getNodo("Metropolitana", 0));
+            updateName("Conveyor1", "ITuristasMetropolitana");
+            model.Facility.IntelligentObjects["ITuristasMetropolitana"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodo("Metropolitana", 1), getNodo("RetornoMetropolitana",0));
-            updateName("Path4", "RMetropolitana");
+            createConveyor(getNodo("Metropolitana", 1), getNodo("RetornoMetropolitana",0));
+            updateName("Conveyor1", "RMetropolitana");
             model.Facility.IntelligentObjects["RMetropolitana"].Properties["SelectionWeight"].Value = "0.35";
+            model.Facility.IntelligentObjects["RMetropolitana"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
             //createPath(getNodobasico("RetornoMetropolitana"), getNodobasico("DecisionLaAurora"));
             //updateName("Path4", "RetornoMetropolitana");
 
-            createPath(getNodobasico("DecisionLaAurora"), getNodo("AeropuertoSalidaMetropolitana", 0));
-            updateName("Path4", "SalidaMetropolitana");
+            createConveyor(getNodobasico("DecisionLaAurora"), getNodo("AeropuertoSalidaMetropolitana", 0));
+            updateName("Conveyor1", "SalidaMetropolitana");
             model.Facility.IntelligentObjects["SalidaMetropolitana"].Properties["SelectionWeight"].Value = "0.5";
+            model.Facility.IntelligentObjects["SalidaMetropolitana"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodobasico("RetornoNorOrienteMetropolitana"), getNodobasico("DecisionLaAurora"));
-            updateName("Path4", "RRetornoNorOrienteMetropolitana2");
+            createConveyor(getNodobasico("RetornoNorOrienteMetropolitana"), getNodobasico("DecisionLaAurora"));
+            updateName("Conveyor1", "RRetornoNorOrienteMetropolitana2");
+            model.Facility.IntelligentObjects["RRetornoNorOrienteMetropolitana2"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodobasico("RetornoCentralMetropolitana"), getNodobasico("DecisionLaAurora"));
-            updateName("Path4", "PRetornoCentralMetropolitana");
+            createConveyor(getNodobasico("RetornoCentralMetropolitana"), getNodobasico("DecisionLaAurora"));
+            updateName("Conveyor1", "PRetornoCentralMetropolitana");
+            model.Facility.IntelligentObjects["PRetornoCentralMetropolitana"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
-            createPath(getNodobasico("DecisionLaAurora"), getNodo("Metropolitana", 0));
-            updateName("Path4", "RetornoInfoMetropolitana");
+            createConveyor(getNodobasico("DecisionLaAurora"), getNodo("Metropolitana", 0));
+            updateName("Conveyor1", "RetornoInfoMetropolitana");
             model.Facility.IntelligentObjects["RetornoInfoMetropolitana"].Properties["SelectionWeight"].Value = "0.5";
+            model.Facility.IntelligentObjects["RetornoInfoMetropolitana"].Properties["InitialDesiredSpeed"].Value = "19.44";
 
 
             //Caminos 
