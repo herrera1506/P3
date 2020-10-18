@@ -57,6 +57,7 @@ namespace _MYS1_Practica3_P21
             updateName("Conveyor1", "Mexico");
             updateProperty("Mexico", "DrawnToScale", "False");
             updateProperty("Mexico", "LogicalLength", "200000");
+            model.Facility.IntelligentObjects["Mexico"].Properties["InitialDesiredSpeed"].Value = "16.66";
             //updateProperty("Mexico", "LogicalUnits", "Kilometers");
             createTransferNode(-20, -70);
             updateName("TransferNode1", "TN3");
@@ -64,161 +65,188 @@ namespace _MYS1_Practica3_P21
             updateName("Conveyor1", "Mexico2");
             updateProperty("Mexico2", "DrawnToScale", "False");
             updateProperty("Mexico2", "LogicalLength", "90000");
+            model.Facility.IntelligentObjects["Mexico2"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(-40, -70);
             updateName("TransferNode1", "TN4");
             createConveyor(getNodobasico("TN3"), getNodobasico("TN4"));
             updateName("Conveyor1", "Mexico3");
             updateProperty("Mexico3", "DrawnToScale", "False");
             updateProperty("Mexico3", "LogicalLength", "62000");
+            model.Facility.IntelligentObjects["Mexico3"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(-13, -50);
             updateName("TransferNode1", "TN5");
             createConveyor(getNodobasico("TN4"), getNodobasico("TN5"));
             updateName("Conveyor1", "Mexico4");
             updateProperty("Mexico4", "DrawnToScale", "False");
             updateProperty("Mexico4", "LogicalLength", "130000");
+            model.Facility.IntelligentObjects["Mexico4"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(-5, -35);
             updateName("TransferNode1", "TN6");
             createConveyor(getNodobasico("TN5"), getNodobasico("TN6"));
             updateName("Conveyor1", "Mexico5");
             updateProperty("Mexico5", "DrawnToScale", "False");
             updateProperty("Mexico5", "LogicalLength", "30000");
+            model.Facility.IntelligentObjects["Mexico5"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(-53, -35);
             updateName("TransferNode1", "TN7");
             createConveyor(getNodobasico("TN6"), getNodobasico("TN7"));
             updateName("Conveyor1", "Mexico6");
             updateProperty("Mexico6", "DrawnToScale", "False");
             updateProperty("Mexico6", "LogicalLength", "180000");
+            model.Facility.IntelligentObjects["Mexico6"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(-68, -5);
             updateName("TransferNode1", "TN8");
             createConveyor(getNodobasico("TN7"), getNodobasico("TN8"));
             updateName("Conveyor1", "Mexico7");
             updateProperty("Mexico7", "DrawnToScale", "False");
             updateProperty("Mexico7", "LogicalLength", "120000");
+            model.Facility.IntelligentObjects["Mexico7"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(-63, 3);
             updateName("TransferNode1", "TN9");
             createConveyor(getNodobasico("TN8"), getNodobasico("TN9"));
             updateName("Conveyor1", "Mexico8");
             updateProperty("Mexico8", "DrawnToScale", "False");
             updateProperty("Mexico8", "LogicalLength", "30000");
+            model.Facility.IntelligentObjects["Mexico8"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(-65, 10);
             updateName("TransferNode1", "TN10");
             createConveyor(getNodobasico("TN9"), getNodobasico("TN10"));
             updateName("Conveyor1", "Mexico9");
             updateProperty("Mexico9", "DrawnToScale", "False");
             updateProperty("Mexico9", "LogicalLength", "20000");
+            model.Facility.IntelligentObjects["Mexico9"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(-53, 33);
             updateName("TransferNode1", "TN11");
             createConveyor(getNodobasico("TN10"), getNodobasico("TN11"));
             updateName("Conveyor1", "Mexico10");
             updateProperty("Mexico10", "DrawnToScale", "False");
             updateProperty("Mexico10", "LogicalLength", "100000");
+            model.Facility.IntelligentObjects["Mexico10"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(-28, 45);
             updateName("TransferNode1", "TN12");
             createConveyor(getNodobasico("TN11"), getNodobasico("TN12"));
             updateName("Conveyor1", "Pacifico");
             updateProperty("Pacifico", "DrawnToScale", "False");
             updateProperty("Pacifico", "LogicalLength", "150000");
+            model.Facility.IntelligentObjects["Pacifico"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(-10, 43);
             updateName("TransferNode1", "TN13");
             createConveyor(getNodobasico("TN12"), getNodobasico("TN13"));
             updateName("Conveyor1", "Pacifico2");
             updateProperty("Pacifico2", "DrawnToScale", "False");
             updateProperty("Pacifico2", "LogicalLength", "54000");
+            model.Facility.IntelligentObjects["Pacifico2"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(5, 47);
             updateName("TransferNode1", "TN14");
             createConveyor(getNodobasico("TN13"), getNodobasico("TN14"));
             updateName("Conveyor1", "Pacifico3");
             updateProperty("Pacifico3", "DrawnToScale", "False");
             updateProperty("Pacifico3", "LogicalLength", "50000");
+            model.Facility.IntelligentObjects["Pacifico3"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(28, 35);
             updateName("TransferNode1", "TN15");
             createConveyor(getNodobasico("TN14"), getNodobasico("TN15"));
             updateName("Conveyor1", "ElSalvador");
             updateProperty("ElSalvador", "DrawnToScale", "False");
             updateProperty("ElSalvador", "LogicalLength", "150000");
+            model.Facility.IntelligentObjects["ElSalvador"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(37, 20);
             updateName("TransferNode1", "TN16");
             createConveyor(getNodobasico("TN15"), getNodobasico("TN16"));
             updateName("Conveyor1", "ElSalvador2");
             updateProperty("ElSalvador2", "DrawnToScale", "False");
             updateProperty("ElSalvador2", "LogicalLength", "53000");
+            model.Facility.IntelligentObjects["ElSalvador2"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(35, 10);
             updateName("TransferNode1", "TN17");
             createConveyor(getNodobasico("TN16"), getNodobasico("TN17"));
             updateName("Conveyor1", "Honduras");
             updateProperty("Honduras", "DrawnToScale", "False");
             updateProperty("Honduras", "LogicalLength", "20000");
+            model.Facility.IntelligentObjects["Honduras"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(42, -3);
             updateName("TransferNode1", "TN18");
             createConveyor(getNodobasico("TN17"), getNodobasico("TN18"));
             updateName("Conveyor1", "Honduras2");
             updateProperty("Honduras2", "DrawnToScale", "False");
             updateProperty("Honduras2", "LogicalLength", "40000");
+            model.Facility.IntelligentObjects["Honduras2"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(52, -5);
             updateName("TransferNode1", "TN19");
             createConveyor(getNodobasico("TN18"), getNodobasico("TN19"));
             updateName("Conveyor1", "Honduras3");
             updateProperty("Honduras3", "DrawnToScale", "False");
             updateProperty("Honduras3", "LogicalLength", "20000");
+            model.Facility.IntelligentObjects["Honduras3"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(80, -20);
             updateName("TransferNode1", "TN20");
             createConveyor(getNodobasico("TN19"), getNodobasico("TN20"));
             updateName("Conveyor1", "Honduras4");
             updateProperty("Honduras4", "DrawnToScale", "False");
             updateProperty("Honduras4", "LogicalLength", "176000");
+            model.Facility.IntelligentObjects["Honduras4"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(75, -30);
             updateName("TransferNode1", "TN21");
             createConveyor(getNodobasico("TN20"), getNodobasico("TN21"));
             updateName("Conveyor1", "Caribe");
             updateProperty("Caribe", "DrawnToScale", "False");
             updateProperty("Caribe", "LogicalLength", "10000");
+            model.Facility.IntelligentObjects["Caribe"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(68, -23);
             updateName("TransferNode1", "TN22");
             createConveyor(getNodobasico("TN21"), getNodobasico("TN22"));
             updateName("Conveyor1", "Caribe2");
             updateProperty("Caribe2", "DrawnToScale", "False");
             updateProperty("Caribe2", "LogicalLength", "10000");
+            model.Facility.IntelligentObjects["Caribe2"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(65, -32);
             updateName("TransferNode1", "TN23");
             createConveyor(getNodobasico("TN22"), getNodobasico("TN23"));
             updateName("Conveyor1", "Caribe3");
             updateProperty("Caribe3", "DrawnToScale", "False");
             updateProperty("Caribe3", "LogicalLength", "10000");
+            model.Facility.IntelligentObjects["Caribe3"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(55, -20);
             updateName("TransferNode1", "TN24");
             createConveyor(getNodobasico("TN23"), getNodobasico("TN24"));
             updateName("Conveyor1", "Caribe4");
             updateProperty("Caribe4", "DrawnToScale", "False");
             updateProperty("Caribe4", "LogicalLength", "20000");
+            model.Facility.IntelligentObjects["Caribe4"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(38, -15);
             updateName("TransferNode1", "TN25");
             createConveyor(getNodobasico("TN24"), getNodobasico("TN25"));
             updateName("Conveyor1", "Caribe5");
             updateProperty("Caribe5", "DrawnToScale", "False");
             updateProperty("Caribe5", "LogicalLength", "30000");
+            model.Facility.IntelligentObjects["Caribe5"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(40, -25);
             updateName("TransferNode1", "TN26");
             createConveyor(getNodobasico("TN25"), getNodobasico("TN26"));
             updateName("Conveyor1", "Caribe6");
             updateProperty("Caribe6", "DrawnToScale", "False");
             updateProperty("Caribe6", "LogicalLength", "15000");
+            model.Facility.IntelligentObjects["Caribe6"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(60, -35);
             updateName("TransferNode1", "TN27");
             createConveyor(getNodobasico("TN26"), getNodobasico("TN27"));
             updateName("Conveyor1", "Caribe7");
             updateProperty("Caribe7", "DrawnToScale", "False");
             updateProperty("Caribe7", "LogicalLength", "53000");
+            model.Facility.IntelligentObjects["Caribe7"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createTransferNode(40, -35);
             updateName("TransferNode1", "TN28");
             createConveyor(getNodobasico("TN27"), getNodobasico("TN28"));
             updateName("Conveyor1", "Belice");
             updateProperty("Belice", "DrawnToScale", "False");
             updateProperty("Belice", "LogicalLength", "66000");
+            model.Facility.IntelligentObjects["Belice"].Properties["InitialDesiredSpeed"].Value = "16.66";
             createConveyor(getNodobasico("TN28"), getNodobasico("TN1"));
             updateName("Conveyor1", "Belice2");
             updateProperty("Belice2", "DrawnToScale", "False");
             updateProperty("Belice2", "LogicalLength", "200000");
-            
+            model.Facility.IntelligentObjects["Belice2"].Properties["InitialDesiredSpeed"].Value = "16.66";
+
         }
 
         public void createZone()
@@ -228,34 +256,42 @@ namespace _MYS1_Practica3_P21
             updateName("Server1", "Metropolitana");
             model.Facility.IntelligentObjects["Metropolitana"].Properties["ProcessingTime"].Value = "Random.Exponential(4)";
             model.Facility.IntelligentObjects["Output@Metropolitana"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
+            model.Facility.IntelligentObjects["Metropolitana"].Properties["InitialCapacity"].Value = "200";
             createServer(5, -20);
             updateName("Server1", "Norte");
             model.Facility.IntelligentObjects["Norte"].Properties["ProcessingTime"].Value = "Random.Exponential(5)";
             model.Facility.IntelligentObjects["Output@Norte"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
+            model.Facility.IntelligentObjects["Norte"].Properties["InitialCapacity"].Value = "50";
             createServer(30, -10);
             updateName("Server1", "NorOriente");
             model.Facility.IntelligentObjects["NorOriente"].Properties["ProcessingTime"].Value = "Random.Exponential(3)";
             model.Facility.IntelligentObjects["Output@NorOriente"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
+            model.Facility.IntelligentObjects["NorOriente"].Properties["InitialCapacity"].Value = "40";
             createServer(15, 20);
             updateName("Server1", "SurOriente");
             model.Facility.IntelligentObjects["SurOriente"].Properties["ProcessingTime"].Value = "Random.Exponential(4)";
             model.Facility.IntelligentObjects["Output@SurOriente"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
+            model.Facility.IntelligentObjects["SurOriente"].Properties["InitialCapacity"].Value = "30";
             createServer(-15, 20);
             updateName("Server1", "Central");
             model.Facility.IntelligentObjects["Central"].Properties["ProcessingTime"].Value = "Random.Exponential(5)";
             model.Facility.IntelligentObjects["Output@Central"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
+            model.Facility.IntelligentObjects["Central"].Properties["InitialCapacity"].Value = "100";
             createServer(-40, 10);
             updateName("Server1", "SurOccidente");
             model.Facility.IntelligentObjects["SurOccidente"].Properties["ProcessingTime"].Value = "Random.Exponential(3)";
             model.Facility.IntelligentObjects["Output@SurOccidente"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
+            model.Facility.IntelligentObjects["SurOccidente"].Properties["InitialCapacity"].Value = "120";
             createServer(-40, -20);
             updateName("Server1", "NorOccidente");
             model.Facility.IntelligentObjects["NorOccidente"].Properties["ProcessingTime"].Value = "Random.Exponential(6)";
             model.Facility.IntelligentObjects["Output@NorOccidente"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
+            model.Facility.IntelligentObjects["NorOccidente"].Properties["InitialCapacity"].Value = "30";
             createServer(10, -50);
             updateName("Server1", "Peten");
             model.Facility.IntelligentObjects["Peten"].Properties["ProcessingTime"].Value = "Random.Exponential(4)";
             model.Facility.IntelligentObjects["Output@Peten"].Properties["OutboundLinkRule"].Value = "ByLinkWeight";
+            model.Facility.IntelligentObjects["Peten"].Properties["InitialCapacity"].Value = "150";
 
 
             createSource(-4, -80);
@@ -588,13 +624,13 @@ namespace _MYS1_Practica3_P21
             updateName("Path1", "PetenNorOriente");
             model.Facility.IntelligentObjects["PetenNorOriente"].Properties["SelectionWeight"].Value = "0.25";
             model.Facility.IntelligentObjects["PetenNorOriente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["PetenNorOriente"].Properties["LogicalLength"].Value = "282";
+            model.Facility.IntelligentObjects["PetenNorOriente"].Properties["LogicalLength"].Value = "282000";
 
             createPath(getNodo("Peten", 1), getNodo("Norte", 0));
             updateName("Path1", "PetenNorte");
             model.Facility.IntelligentObjects["PetenNorte"].Properties["SelectionWeight"].Value = "0.25";
             model.Facility.IntelligentObjects["PetenNorte"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["PetenNorte"].Properties["LogicalLength"].Value = "147";
+            model.Facility.IntelligentObjects["PetenNorte"].Properties["LogicalLength"].Value = "147000";
 
             createPath(getNodo("FuerzaAerea", 0), getNodobasico("TN3"));
             updateName("Path1", "FuerzaT3");
@@ -604,62 +640,62 @@ namespace _MYS1_Practica3_P21
             updateName("Path1", "NortenNorOriente");
             model.Facility.IntelligentObjects["NortenNorOriente"].Properties["SelectionWeight"].Value = "0.10";
             model.Facility.IntelligentObjects["NortenNorOriente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["NortenNorOriente"].Properties["LogicalLength"].Value = "138";
+            model.Facility.IntelligentObjects["NortenNorOriente"].Properties["LogicalLength"].Value = "138000";
 
             createPath(getNodobasico("SalidaNorteNorOccidente"), getNodo("NorOccidente", 0));
             updateName("Path1", "NorteNorOccidente");
             //model.Facility.IntelligentObjects["NorteNorOccidente"].Properties["SelectionWeight"].Value = "0.10";
             model.Facility.IntelligentObjects["NorteNorOccidente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["NorteNorOccidente"].Properties["LogicalLength"].Value = "145";
+            model.Facility.IntelligentObjects["NorteNorOccidente"].Properties["LogicalLength"].Value = "145000";
 
             createPath(getNodo("Norte", 1), getNodobasico("DecisionMundoMaya"));
             updateName("Path1", "NortePten");
             model.Facility.IntelligentObjects["NortePten"].Properties["SelectionWeight"].Value = "0.4";
             model.Facility.IntelligentObjects["NortePten"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["NortePten"].Properties["LogicalLength"].Value = "147";
+            model.Facility.IntelligentObjects["NortePten"].Properties["LogicalLength"].Value = "147000";
 
             //NorOccidente
             createPath(getNodo("NorOccidente", 1), getNodo("Central", 0));
             updateName("Path1", "NorOccidenteCentral");
             model.Facility.IntelligentObjects["NorOccidenteCentral"].Properties["SelectionWeight"].Value = "0.10";
             model.Facility.IntelligentObjects["NorOccidenteCentral"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["NorOccidenteCentral"].Properties["LogicalLength"].Value = "269";
+            model.Facility.IntelligentObjects["NorOccidenteCentral"].Properties["LogicalLength"].Value = "269000";
 
             createPath(getNodo("NorOccidente", 1), getNodobasico("DecisionInternacionalQuetzaltenango"));
             updateName("Path1", "NorOccidenteSurOccidente");
             model.Facility.IntelligentObjects["NorOccidenteSurOccidente"].Properties["SelectionWeight"].Value = "0.30";
             model.Facility.IntelligentObjects["NorOccidenteSurOccidente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["NorOccidenteSurOccidente"].Properties["LogicalLength"].Value = "87";
+            model.Facility.IntelligentObjects["NorOccidenteSurOccidente"].Properties["LogicalLength"].Value = "87000";
 
             createPath(getNodo("NorOccidente", 1), getNodo("Norte", 0));
             updateName("Path1", "NorOccidenteNorte");
             model.Facility.IntelligentObjects["NorOccidenteNorte"].Properties["SelectionWeight"].Value = "0.20";
             model.Facility.IntelligentObjects["NorOccidenteNorte"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["NorOccidenteNorte"].Properties["LogicalLength"].Value = "145";
+            model.Facility.IntelligentObjects["NorOccidenteNorte"].Properties["LogicalLength"].Value = "145000";
 
             //NorOriente
             createPath(getNodobasico("SalidaNorteNorOriente"), getNodobasico("ResTNorte"));
             updateName("Path1", "NorOrienteNorte");
            // model.Facility.IntelligentObjects["NorOrienteNorte"].Properties["SelectionWeight"].Value = "0.15";
             model.Facility.IntelligentObjects["NorOrienteNorte"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["NorOrienteNorte"].Properties["LogicalLength"].Value = "138";
+            model.Facility.IntelligentObjects["NorOrienteNorte"].Properties["LogicalLength"].Value = "138000";
 
             createPath(getNodobasico("SalidaMetropolintanaNorOriente"), getNodobasico("RetornoNorOrienteMetropolitana"));
             updateName("Path1", "NorOrienteMetropolitana");
             model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["LogicalLength"].Value = "241";
+            model.Facility.IntelligentObjects["NorOrienteMetropolitana"].Properties["LogicalLength"].Value = "241000";
 
             createPath(getNodo("NorOriente", 1), getNodobasico("DecisionMundoMaya"));
             updateName("Path1", "NorOrientePeten");
             model.Facility.IntelligentObjects["NorOrientePeten"].Properties["SelectionWeight"].Value = "0.30";
             model.Facility.IntelligentObjects["NorOrientePeten"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["NorOrientePeten"].Properties["LogicalLength"].Value = "282";
+            model.Facility.IntelligentObjects["NorOrientePeten"].Properties["LogicalLength"].Value = "282000";
 
             createPath(getNodo("NorOriente", 1), getNodo("SurOriente", 0));
             updateName("Path1", "NorOrienteSurOriente");
             model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["SelectionWeight"].Value = "0.05";
             model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["LogicalLength"].Value = "231";
+            model.Facility.IntelligentObjects["NorOrienteSurOriente"].Properties["LogicalLength"].Value = "231000";
 
             //createPath(getNodobasico("RetornoMetropolitanaNorOriente"), getNodo("NorOriente",0));
             //updateName("Path1", "NorOrienteMetropolitana");
@@ -673,13 +709,13 @@ namespace _MYS1_Practica3_P21
             updateName("Path1", "SurOccidenteCentral"); //path5
             model.Facility.IntelligentObjects["SurOccidenteCentral"].Properties["SelectionWeight"].Value = "0.35";
             model.Facility.IntelligentObjects["SurOccidenteCentral"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["SurOccidenteCentral"].Properties["LogicalLength"].Value = "155";
+            model.Facility.IntelligentObjects["SurOccidenteCentral"].Properties["LogicalLength"].Value = "155000";
 
             createPath(getNodo("SurOccidente", 1), getNodo("NorOccidente", 0));
             updateName("Path1", "SurOccidenteOccidente");
             model.Facility.IntelligentObjects["SurOccidenteOccidente"].Properties["SelectionWeight"].Value = "0.30";
             model.Facility.IntelligentObjects["SurOccidenteOccidente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["SurOccidenteOccidente"].Properties["LogicalLength"].Value = "87";
+            model.Facility.IntelligentObjects["SurOccidenteOccidente"].Properties["LogicalLength"].Value = "87000";
 
 
             //SurOriente
@@ -687,44 +723,44 @@ namespace _MYS1_Practica3_P21
             updateName("Path1", "SurOrienteNorOriente");
             model.Facility.IntelligentObjects["SurOrienteNorOriente"].Properties["SelectionWeight"].Value = "0.20";
             model.Facility.IntelligentObjects["SurOrienteNorOriente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["SurOrienteNorOriente"].Properties["LogicalLength"].Value = "231";
+            model.Facility.IntelligentObjects["SurOrienteNorOriente"].Properties["LogicalLength"].Value = "231000";
 
             createPath(getNodo("SurOriente", 1), getNodobasico("DecisionLaAurora"));
             updateName("Path1", "SurOrienteMetropolitana");
             model.Facility.IntelligentObjects["SurOrienteMetropolitana"].Properties["SelectionWeight"].Value = "0.25";
             model.Facility.IntelligentObjects["SurOrienteMetropolitana"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["SurOrienteMetropolitana"].Properties["LogicalLength"].Value = "124";
+            model.Facility.IntelligentObjects["SurOrienteMetropolitana"].Properties["LogicalLength"].Value = "124000";
 
             createPath(getNodobasico("CentralSurOriente"), getNodo("Central",0));
             updateName("Path1", "SurOrienteCentral");
             model.Facility.IntelligentObjects["SurOrienteCentral"].Properties["SelectionWeight"].Value = "0.15";
             model.Facility.IntelligentObjects["SurOrienteCentral"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["SurOrienteCentral"].Properties["LogicalLength"].Value = "154";
+            model.Facility.IntelligentObjects["SurOrienteCentral"].Properties["LogicalLength"].Value = "154000";
 
             //Central 
             createPath(getNodobasico("SalidaSurOccidenteCentral"), getNodobasico("RetornoCentralSurOccidente"));
             updateName("Path1", "CentralSurOccidente");
             model.Facility.IntelligentObjects["CentralSurOccidente"].Properties["SelectionWeight"].Value = "0.15";
             model.Facility.IntelligentObjects["CentralSurOccidente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["CentralSurOccidente"].Properties["LogicalLength"].Value = "154";
+            model.Facility.IntelligentObjects["CentralSurOccidente"].Properties["LogicalLength"].Value = "154000";
 
             createPath(getNodo("Central",1), getNodobasico("RetornoCentralMetropolitana"));
             updateName("Path1", "CentralMetropolitana");
             model.Facility.IntelligentObjects["CentralMetropolitana"].Properties["SelectionWeight"].Value = "0.35";
             model.Facility.IntelligentObjects["CentralMetropolitana"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["CentralMetropolitana"].Properties["LogicalLength"].Value = "63";
+            model.Facility.IntelligentObjects["CentralMetropolitana"].Properties["LogicalLength"].Value = "63000";
 
             createPath(getNodo("Central", 1), getNodo("SurOriente",0));
             updateName("Path1", "PCentralSurOriente");
             model.Facility.IntelligentObjects["PCentralSurOriente"].Properties["SelectionWeight"].Value = "0.05";
             model.Facility.IntelligentObjects["PCentralSurOriente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["PCentralSurOriente"].Properties["LogicalLength"].Value = "155";
+            model.Facility.IntelligentObjects["PCentralSurOriente"].Properties["LogicalLength"].Value = "155000";
 
             createPath(getNodo("Central", 1), getNodo("NorOccidente", 0));
             updateName("Path1", "CentralNorOccidente");
             model.Facility.IntelligentObjects["CentralNorOccidente"].Properties["SelectionWeight"].Value = "0.10";
             model.Facility.IntelligentObjects["CentralNorOccidente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["CentralNorOccidente"].Properties["LogicalLength"].Value = "269";
+            model.Facility.IntelligentObjects["CentralNorOccidente"].Properties["LogicalLength"].Value = "269000";
 
 
             //Metropolitana
@@ -733,19 +769,19 @@ namespace _MYS1_Practica3_P21
             updateName("Path1", "MetropolitanaNorOriente");//path6
             model.Facility.IntelligentObjects["MetropolitanaNorOriente"].Properties["SelectionWeight"].Value = "0.20";
             model.Facility.IntelligentObjects["MetropolitanaNorOriente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["MetropolitanaNorOriente"].Properties["LogicalLength"].Value = "241";
+            model.Facility.IntelligentObjects["MetropolitanaNorOriente"].Properties["LogicalLength"].Value = "241000";
 
             createPath(getNodo("Metropolitana", 1), getNodobasico("MetroSurOriente"));
             updateName("Path1", "MetropolitanaSurOriente");
             model.Facility.IntelligentObjects["MetropolitanaSurOriente"].Properties["SelectionWeight"].Value = "0.15";
             model.Facility.IntelligentObjects["MetropolitanaSurOriente"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["MetropolitanaSurOriente"].Properties["LogicalLength"].Value = "124";
+            model.Facility.IntelligentObjects["MetropolitanaSurOriente"].Properties["LogicalLength"].Value = "124000";
 
             createPath(getNodo("Metropolitana", 1), getNodo("Central", 0));
             updateName("Path1", "MetropolitanaCentrall");
             model.Facility.IntelligentObjects["MetropolitanaCentrall"].Properties["SelectionWeight"].Value = "0.30";
             model.Facility.IntelligentObjects["MetropolitanaCentrall"].Properties["DrawnToScale"].Value = "False";
-            model.Facility.IntelligentObjects["MetropolitanaCentrall"].Properties["LogicalLength"].Value = "63";
+            model.Facility.IntelligentObjects["MetropolitanaCentrall"].Properties["LogicalLength"].Value = "63000";
 
 
 
